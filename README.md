@@ -166,5 +166,8 @@ image.dataframe = data.frame(r=as.vector(image\[,,1\]),
 # (get the result picture)
 #
 
-> (source code picture)
+
 ```
+
+> (source code picture)
+![ex_screenshot](./img/screenshot.png)
