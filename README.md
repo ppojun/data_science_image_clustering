@@ -170,4 +170,4 @@ image.dataframe = data.frame(r=as.vector(image\[,,1\]),
 ```
 
 > (source code picture)
-![ex_screenshot](./img/screenshot.png)
+![code](./data_science_image_clustering/code.png)
