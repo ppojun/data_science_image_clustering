@@ -88,84 +88,83 @@ with similar colors.
 
 5.  **Codes**
 ```r
--   install.packages(\"jpeg\")
-```
-> (Installing a library for loading images)
+install.packages(\"jpeg\")
 
--   library(jpeg)
+#(Installing a library for loading images)
 
-> (load library)
+library(jpeg)
 
--   image = readJPEG(\'c:/house.jpeg\')
+#(load library)
 
-> (Bring in an image and put it in a variable.)
+image = readJPEG(\'c:/house.jpeg\')
 
--   dim(image)
+#(Bring in an image and put it in a variable.)
 
-> (You can see that Dimension is X by X 3 (rgb).)
+dim(image)
 
--   plot(1:2, type=\"n\", xlab=\'\', ylab=\'\')
+#(You can see that Dimension is X by X 3 (rgb).)
 
-> (I made an empty plot.)
+plot(1:2, type=\"n\", xlab=\'\', ylab=\'\')
 
--   rasterImage(image, 1, 1, 2, 2)
+#(I made an empty plot.)
 
-> (Load the image to the desired size.)
+rasterImage(image, 1, 1, 2, 2)
 
--   image\[1,1,\]
+#(Load the image to the desired size.)
 
-> (Check the rgb value of the pixel(1,1).)
+image\[1,1,\]
 
--   image.dataframe = data.frame(r=as.vector(image\[,,1\]),
+#(Check the rgb value of the pixel(1,1).)
+
+image.dataframe = data.frame(r=as.vector(image\[,,1\]),
     g=as.vector(image\[,,2\]), b=as.vector(image\[,,3\]))
 
-> (Now the data has been transformed to apply K-means clustering.
->
-> Since the concept of horizontal or vertical in segmentation was
-> meaningless anyway, it was transformed into a one-dimensional vector
-> and transformed into a three-dimensional data type of (r, g, b).)
+# (Now the data has been transformed to apply K-means clustering.
+#
+# Since the concept of horizontal or vertical in segmentation was
+# meaningless anyway, it was transformed into a one-dimensional vector
+# and transformed into a three-dimensional data type of (r, g, b).)
 
--   dim(image.dataframe)
+   dim(image.dataframe)
 
-> (Verifies that the exact number of data samples is equal to the number
-> of pixels)
+# (Verifies that the exact number of data samples is equal to the number
+# of pixels)
 
--   head(image.dataframe)
+   head(image.dataframe)
 
-> (Check only the first part using the head function)
+# (Check only the first part using the head function)
 
--   kmeans.fit = kmeans(image.dataframe, centers=6, nstart=5)
+   kmeans.fit = kmeans(image.dataframe, centers=6, nstart=5)
 
-> (These pixels were separated by a cluster of random numbers (K=6).)
+# (These pixels were separated by a cluster of random numbers (K=6).)
 
--   kmeans.fit\$centers
+   kmeans.fit\$centers
 
-(Then, check what these segmented pixels look like.
+#(Then, check what these segmented pixels look like.
 
-> To do so, the data is restored to the original array format.)
+# To do so, the data is restored to the original array format.)
 
--   kmeansCompressed.dataframe =
+   kmeansCompressed.dataframe =
     kmeans.fit\$centers\[kmeans.fit\$cluster,\]
 
-> (each pixel\'s data is filled with the data from the pentroid.)
+# (each pixel\'s data is filled with the data from the pentroid.)
 
--   dim(kmeansCompressed.dataframe)
+   dim(kmeansCompressed.dataframe)
 
--   kmeansCompressed = array(kmeansCompressed.dataframe, dim(image))
+   kmeansCompressed = array(kmeansCompressed.dataframe, dim(image))
 
-> (Move the dataframe type back to the array format.)
+# (Move the dataframe type back to the array format.)
 
--   dim(kmeansCompressed)
+   dim(kmeansCompressed)
 
-> (Confirmation that it is again in the form of (street, vertical, 3))
+# (Confirmation that it is again in the form of (street, vertical, 3))
 
--   plot(1:2, type=\"n\", xlab=\'\', ylab=\'\')
+   plot(1:2, type=\"n\", xlab=\'\', ylab=\'\')
 
--   rasterImage(kmeansCompressed, 1, 1, 2, 2)
+   rasterImage(kmeansCompressed, 1, 1, 2, 2)
 
-> (get the result picture)
->
-> ![](media/image4.png){width="4.471202974628172in"
-> height="6.417910104986877in"}
->
+# (get the result picture)
+#
+
 > (source code picture)
+```
