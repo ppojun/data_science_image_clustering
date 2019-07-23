@@ -6,7 +6,7 @@
 
 April 26, 2019
 
-1.  **Introduction**
+## **1.Introduction**
 
 > Cluster analysis or clustering is the task of grouping a set of
 > objects in such a way that objects in the same group (called a
@@ -26,7 +26,7 @@ April 26, 2019
 > its properties. Understanding these \"cluster models\" is key to
 > understanding the differences between the various algorithms.
 
-2.  **Data description**
+##  **2.Data description**
 
 > I downloaded the image 'house.ppm' to use from
 > website( [[http://cs.joensuu.fi/sipu/datasets/]{.underline}](http://cs.joensuu.fi/sipu/datasets/)).
@@ -41,7 +41,7 @@ April 26, 2019
 ![house.jpeg](./data_science_image_clustering/house.jpeg)
 (house.jpeg)
 
-3.  **Description of the selected method**
+##  **3.Description of the selected method**
 
 > Centroid models: for example, the k-means algorithm represents each
 > cluster by a single mean vector.
@@ -75,7 +75,7 @@ with similar colors.
 > In addition, segmentation allows information to be sent in a reduced
 > scale of 1 to K index instead of 24 bits per pixel.
 
-4.  **Results**
+##  **4.Results**
 
 ![original.jpeg](./data_science_image_clustering/original.jpeg)
 >
@@ -85,7 +85,7 @@ with similar colors.
 >
 > (after clustering picture)
 
-5.  **Codes**
+##  **5.Codes**
 ```r
 install.packages(\"jpeg\")
 
