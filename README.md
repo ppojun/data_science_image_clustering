@@ -38,6 +38,7 @@ April 26, 2019
 ![](media/image1.jpeg){width="3.5520833333333335in"
 height="3.5520833333333335in"}
 
+![house.jpeg](./data_science_image_clustering/house.jpeg)
 (house.jpeg)
 
 3.  **Description of the selected method**
@@ -76,13 +77,11 @@ with similar colors.
 
 4.  **Results**
 
-> ![](media/image2.jpeg){width="3.1496062992125986in"
-> height="4.003937007874016in"}
+![original.jpeg](./data_science_image_clustering/original.jpeg)
 >
 > (the original picture)
 >
-> ![](media/image3.jpeg){width="3.1496062992125986in"
-> height="4.003937007874016in"}
+![result.jpeg](./data_science_image_clustering/result.jpeg)
 >
 > (after clustering picture)
 
@@ -170,4 +169,7 @@ image.dataframe = data.frame(r=as.vector(image\[,,1\]),
 ```
 
 > (source code picture)
+
+
+------------------------------------------------------------------------------------------------------------------
 ![code](./data_science_image_clustering/code.png)
