@@ -1,4 +1,4 @@
-﻿Clustering Algorithm
+#Clustering Algorithm
 
 홍준성 Hong JuneSung
 
@@ -35,8 +35,6 @@ April 26, 2019
 >
 > And then I can get 'house.jpeg' file.
 
-![](media/image1.jpeg){width="3.5520833333333335in"
-height="3.5520833333333335in"}
 
 ![house.jpeg](./data_science_image_clustering/house.jpeg)
 (house.jpeg)
