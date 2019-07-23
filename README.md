@@ -87,9 +87,9 @@ with similar colors.
 > (after clustering picture)
 
 5.  **Codes**
-
+'''R
 -   install.packages(\"jpeg\")
-
+'''
 > (Installing a library for loading images)
 
 -   library(jpeg)
